@@ -1,5 +1,5 @@
 {% set name = "types-pytz" %}
-{% set version = "2023.3.0.0" %}
+{% set version = "2023.3.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-pytz-{{ version }}.tar.gz
-  sha256: ecdc70d543aaf3616a7e48631543a884f74205f284cefd6649ddf44c6a820aac
+  sha256: 1a7b8d4aac70981cfa24478a41eadfcd96a087c986d6f150d77e3ceb3c2bdfab
 
 build:
   number: 0
