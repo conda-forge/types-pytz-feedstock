@@ -7,22 +7,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-pytz-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/types-pytz-{{ version }}.tar.gz
   sha256: 575dc38f385a922a212bac00a7d6d2e16e141132a3c955078f4a4fd13ed6cb44
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python {{ python_min }}
+    - setuptools
     - pip
-    - python >=3.6
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - test -f $SP_DIR/pytz-stubs/__init__.pyi
 
