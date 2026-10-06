@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: types-pytz
-  version: "2026.4.0.20260926"
+  version: "2026.5.0.20261006"
 
 package:
   name: ${{ name | lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/types_pytz-${{ version }}.tar.gz
-  sha256: 2ad5cde113cd6a58dd59c34f3c93f1bce2d126c769bfac15207ca7d7efd65390
+  sha256: 1a522c2ec03aad8d4baaf97105958019ad51704b1e471c882d1c6ccea3e5e64b
 
 build:
   number: 0
